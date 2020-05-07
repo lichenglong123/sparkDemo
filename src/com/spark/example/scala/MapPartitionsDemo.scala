@@ -30,7 +30,5 @@ object MapPartitionsDemo {
     val mapResult = rdd.mapPartitions(doubleFunc)
 
     println(mapResult.collect().mkString)
-
-
   }
 }
