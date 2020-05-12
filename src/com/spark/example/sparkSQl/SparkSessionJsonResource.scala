@@ -13,7 +13,7 @@ object SparkSessionJsonResource {
     val config=new SparkConf().setAppName("json").setMaster("local[2]");
     val sparkSeesion=new SparkSession.Builder().config(config).getOrCreate();
     val dataFrame= sparkSeesion.read.json("F:\\testData\\people.json");
-    dataFrame.show();
+     dataFrame.show();
     dataFrame.printSchema();
     dataFrame.select("age","name").show()
    val newage= dataFrame.col("age").plus(10).as("newAge")
